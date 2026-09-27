@@ -1,0 +1,91 @@
+{
+  "guangyun": {
+    "repository": "https://github.com/nk2028/tshet-uinh-data",
+    "commit": "21585e22c8a730ca2fd175112f4d18e16d5ce578",
+    "source_url": "https://raw.githubusercontent.com/nk2028/tshet-uinh-data/21585e22c8a730ca2fd175112f4d18e16d5ce578/%E9%9F%BB%E6%9B%B8/%E5%BB%A3%E9%9F%BB.csv",
+    "source_sha256": "f2b66197355d4fbff0776ab34e4aece817363b00446fbcf08e2f1677a7ac0c5f",
+    "license": "CC0-1.0",
+    "raw_entries": 25336,
+    "retained_entries": 25330,
+    "positions": 3801,
+    "excluded": [
+      {
+        "小韻號": "231",
+        "字頭": "｛㶛｝",
+        "音韻地位": "以開三魚平"
+      },
+      {
+        "小韻號": "318",
+        "字頭": "｛𪈥｝",
+        "音韻地位": "匣合四齊平"
+      },
+      {
+        "小韻號": "597",
+        "字頭": "｛𤜼｝",
+        "音韻地位": "章開三陽入"
+      },
+      {
+        "小韻號": "2021",
+        "字頭": "｛㶒｝",
+        "音韻地位": "書開三鹽上"
+      },
+      {
+        "小韻號": "3373",
+        "字頭": "｛𣅝｝",
+        "音韻地位": "透合一魂入"
+      },
+      {
+        "小韻號": "3390",
+        "字頭": "｛𦖼｝",
+        "音韻地位": "匣合一魂入"
+      }
+    ],
+    "cache_file": "guangyun.csv"
+  },
+  "original_scheme": {
+    "repository": "https://github.com/IemKwangqHraek/prengQvm",
+    "commit": "524c7110fb2f97a8cc3284097197ae239accce89",
+    "file": "prengQvm.js",
+    "sha256": "7717b0acedd42ad6e28c092db24af1e0b094d1ea4befda1827fddd2467ed23d9",
+    "retrieved": "2026-09-27",
+    "download_url": "https://raw.githubusercontent.com/IemKwangqHraek/prengQvm/524c7110fb2f97a8cc3284097197ae239accce89/prengQvm.js",
+    "cache_file": "original-prengQvm.js"
+  },
+  "deriver": {
+    "repository": "https://github.com/nk2028/tshet-uinh-deriver",
+    "commit": "99f0b340e6d09c7386de541290c281f2c8d4e73f",
+    "commit_date": "2026-07-30T13:58:02Z",
+    "site": "https://nk2028.shn.hk/tshet-uinh-deriver/",
+    "interface": "new Function(\"選項\", \"音韻地位\", \"字頭\", \"require\", input)",
+    "evidence": "https://github.com/nk2028/tshet-uinh-deriver/blob/99f0b340e6d09c7386de541290c281f2c8d4e73f/src/evaluate.ts"
+  },
+  "runtime": {
+    "tshet-uinh": "0.15.4",
+    "tshet-uinh-deriver-tools": "0.2.0",
+    "lockfile": "../package-lock.json"
+  },
+  "scope": {
+    "current_positions": 3804,
+    "original_positions": 3801,
+    "union_positions": 3808,
+    "legacy_only_positions": [
+      "影開三B仙去",
+      "心合三虞去",
+      "章合三清入",
+      "見開三A仙上"
+    ],
+    "current_only_positions": [
+      "滂三A支平",
+      "初開二山平",
+      "並三A陽上",
+      "影開三A仙去",
+      "清三尤去",
+      "見合三A清入",
+      "云合三B真去"
+    ],
+    "supplemental_syllables": [
+      "怎"
+    ],
+    "note": "原固定版廣韻與 tshet-uinh 0.15.4 取聯集；不刪除差異地位。"
+  }
+}

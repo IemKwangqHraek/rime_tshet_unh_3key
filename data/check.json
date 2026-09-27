@@ -1,0 +1,35 @@
+{
+  "tshet_uinh": "0.15.4",
+  "deriver_tools": "0.2.0",
+  "script_sha256": "3f28db216c9a4c6798bb2741141c86ce4bd4df7f8cd97b17ffef09787460ac49",
+  "original_positions": 3801,
+  "current_positions": 3804,
+  "current_only_positions": [
+    "滂三A支平",
+    "初開二山平",
+    "並三A陽上",
+    "影開三A仙去",
+    "清三尤去",
+    "見合三A清入",
+    "云合三B真去"
+  ],
+  "legacy_only_positions": [
+    "影開三B仙去",
+    "心合三虞去",
+    "章合三清入",
+    "見開三A仙上"
+  ],
+  "union_positions": 3808,
+  "supplemental_syllables": 1,
+  "full_spelling_collisions": 0,
+  "three_key_collisions": 0,
+  "key_counts": [
+    24,
+    23,
+    21
+  ],
+  "second_segments": 52,
+  "reconstruction_exception": "端開四麻平：全拼 tiae；三段 t / va / ∅",
+  "layout_revision": "ia 從 A 移至 J，避免 biangq 與 braengq 同爲 BAF",
+  "fixed_spelling_checks": 22
+}
