@@ -1,0 +1,67 @@
+# Rime schema
+# encoding: utf-8
+# 由 scripts/build_rime.mjs 生成；請修改模板及 config/keyboards/*.json。
+schema:
+  schema_id: {{ID}}
+  name: {{NAME}}
+  version: {{VERSION}}
+  description: |
+    prengQvm 小改版；全拼字典、獨立三拼 prism。
+    三拼鍵位：{{LAYOUT}}
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [漢字, 西文]
+  - name: full_shape
+    states: [半角, 全角]
+  - name: ascii_punct
+    states: [。，, ．，]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+  filters:
+    - uniquifier
+
+speller:
+  alphabet: abcdefghijklmnopqrstuvwxyz
+  delimiter: " '"
+{{SPELLER}}
+
+translator:
+  dictionary: preng
+  prism: {{ID}}
+  user_dict: preng
+  enable_user_dict: true
+  enable_sentence: true
+  enable_completion: true
+  spelling_hints: 100
+  comment_format:
+    - "xform/$/\u200b/" # 參考 rime-tupa：完整輸入時也顯示全拼
+
+menu:
+  page_size: 9
+
+punctuator:
+  import_preset: default
+key_binder:
+  import_preset: default
+recognizer:
+  import_preset: default

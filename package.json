@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "derive": "node scripts/derive.mjs",
-    "test": "node scripts/test_prengQvm.mjs && node scripts/check_docs.mjs",
+    "test": "node scripts/test_prengQvm.mjs && node scripts/check_docs.mjs && node scripts/test_rime.mjs",
+    "build:rime": "node scripts/build_rime.mjs",
     "build:data": "node scripts/test_prengQvm.mjs --write",
     "fetch:sources": "node scripts/fetch_sources.mjs",
     "audit:fanqie": "python3 scripts/analyze_hao_fanqie.py --check"

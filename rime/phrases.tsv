@@ -1,0 +1,7 @@
+# 詞語<TAB>逐音節全拼（空格分隔）<TAB>權重；多音字須明確選讀。
+# 這是擴充入口及少量測試詞，不是完整現代詞庫。
+中古	trung koq	100
+漢語	hanh ngvoq	100
+中古漢語	trung koq hanh ngvoq	100
+切韻	tshet unh	100
+東風	twung pung	100

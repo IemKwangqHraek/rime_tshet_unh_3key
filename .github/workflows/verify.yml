@@ -23,6 +23,7 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - run: npm test
+      - run: npm run build:rime
       - name: Verify pinned upstream sources and fanqie results
         if: matrix.node == 24
         run: |

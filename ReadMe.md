@@ -41,6 +41,7 @@ npm run derive -- --position 端一冬平 生開三庚平
 
 ## 文檔與資料
 
+- [Rime 使用與改鍵](docs/Rime使用與改鍵.md)：生成、安裝全拼／三拼方案，修改 JSON 鍵位配置及擴充詞典。
 - [全拼與三拼方案](docs/全拼與三拼方案.md)：完整聲韻規則、26 鍵表、例字及用法。
 - [設計取捨](docs/設計取捨.md)：輸入局部性、共鍵與解析要求。
 - [音系與豪韻](docs/音系與豪韻.md)：拼寫與擬音的區別、豪韻證據及反切核查。
@@ -49,4 +50,12 @@ npm run derive -- --position 端一冬平 生開三庚平
 
 `prengQvm.js` 是可單獨匯入的推導方案；`scripts/` 是本地查詢與驗證工具；`data/` 收錄本方案產生的結果及來源清單。上游原始碼、完整《廣韻》CSV、`node_modules` 和下載快取不隨庫提交。未採用的元音與順序解析實驗不列入發布內容。
 
-本倉庫提供全拼、三拼與推導基礎設施；目前尚未交付可安裝的 Rime schema、字詞典和候選介面。
+## Rime 輸入方案
+
+```sh
+npm run build:rime
+```
+
+生成可安裝的全拼／三拼方案及共用字典至 `dist/rime/`。三拼按鍵由 [config/keyboards/default.json](config/keyboards/default.json) 配置；修改後再次生成即可，亦支援 `npm run build:rime -- --layout config/keyboards/my-layout.json --out dist/my-layout`。生成時檢查漏配、非法按鍵及完整三鍵碰撞，候選提供全拼提示。
+
+安裝及改鍵流程見 [Rime 使用與改鍵](docs/Rime使用與改鍵.md)。JSON 控制 Rime 鍵位；推導器內建試排及 `data/` 的基準鍵表維持獨立。
