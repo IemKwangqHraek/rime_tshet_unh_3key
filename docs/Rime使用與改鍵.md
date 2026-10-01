@@ -2,7 +2,7 @@
 
 兩套方案共用全拼字典 `preng`，以 Rime 內建的 `script_translator` 提供候選、連續輸入、自造詞及用戶詞典。全拼方案爲 `preng`，三拼方案爲 `preng_sp`；兩者各有自己的 prism（輸入碼索引），共用用戶詞典。不需要 Lua、TUPA 字典或額外反查方案。
 
-架構參考 [rime-tupa](https://github.com/nk2028/rime-tupa) 及 [rime-tupa-sp](https://github.com/syimyuzya/rime-tupa-sp)：共用全拼字典、獨立三拼 prism，以及候選全拼提示。拼音規則仍使用本倉庫的 [prengQvm.js](../prengQvm.js)，不是 TUPA 拼音；預設按鍵沿用現用試排，並未定案。
+架構參考 [rime-tupa](https://github.com/nk2028/rime-tupa) 及 [rime-tupa-sp](https://github.com/syimyuzya/rime-tupa-sp)：共用全拼字典、獨立三拼 prism，以及候選全拼提示。拼音規則仍使用本倉庫的 [prengQvm.js](../prengQvm.js)，不是 TUPA 拼音；預設採用[古今混合頻率優化鍵表](鍵位優化結果.md)。
 
 ## 生成與安裝
 
@@ -38,8 +38,8 @@ patch:
 ## 輸入與候選
 
 - 全拼輸入小寫完整拼音，例如 `twung` → 東、`towng` → 冬、`tsvmq` → 怎。上、去聲的 `q/h` 和入聲韻尾均保留。
-- 三拼輸入小寫三鍵，例如預設配置的 `tgd` → 東、`twd` → 冬、`fnv` → 怎。不需要 Shift，空片段仍佔一鍵。
-- 連續輸入可組詞，例如全拼 `trungkoq`、三拼 `ttdkdj` → 中古；也可用單引號明確分開音節，例如 `trung'koq` 或 `ttd'kdj`。
+- 三拼輸入小寫三鍵，例如預設配置的 `fjl` → 東、`fql` → 冬、`rem` → 怎。不需要 Shift，空片段仍佔一鍵。
+- 連續輸入可組詞，例如全拼 `trungkoq`、三拼 `fnlkdj` → 中古；也可用單引號明確分開音節，例如 `trung'koq` 或 `fnl'kdj`。
 - 空格選定候選；數字選詞、翻頁及中西文切換沿用 Rime 預設。三拼滿三鍵不會自動上屏，可以繼續輸入詞語。
 - 候選註釋顯示全拼；不滿三鍵時可補全候選。共鍵音節可能要到第三鍵才能區分，前兩鍵沒有唯一的逐段還原提示。
 
@@ -80,7 +80,7 @@ JSON 格式爲：
 
 重建後檢查輸出目錄的 `keyboard.tsv`、`codes.tsv` 和 `build.json`，再複製更新後的三個 YAML 檔並重新部署。僅改鍵位不改全拼字典、詞條或用戶詞典；三拼 schema 的版本包含配置雜湊，以觸發 prism 更新。`schema_id` 保持不變，因此不同試排預設是互相替換使用。
 
-**Rime 鍵位配置與推導器內建試排的範圍不同。** 根目錄 `prengQvm.js` 是可獨立貼到網頁推導器的檔案，仍內含原試排；`data/keyboard.tsv`、`data/positions.tsv` 和音系文檔亦保留這份基準。調整 JSON 後，以本次 Rime 輸出目錄的鍵表爲準，不用更改推導腳本或音系文檔。`npm test` 可驗證新的合法配置，不要求它與舊試排一致。
+預設 [JSON 鍵表](../config/keyboards/default.json)、根目錄 `prengQvm.js`、`data/keyboard.tsv` 及 `data/positions.tsv` 使用同一最終配置。原始試排另存爲 [baseline.json](../config/keyboards/baseline.json)，可用 `--layout` 生成比較版；自訂 JSON 不會自動改寫推導腳本或文檔。
 
 ## 擴充詞典與生成原理
 

@@ -13,6 +13,10 @@ assert.equal(original.stats.character_entries, 25304);
 assert.ok(original.stats.phrase_entries >= 5);
 assert.equal(original.stats.skipped_entries.length, 4);
 assert.deepEqual(build(layout).files, original.files, '生成須逐位元可重現');
+const publishedCodes = new Map(fs.readFileSync(path.join(root, 'data/positions.tsv'), 'utf8')
+  .trim().split('\n').slice(1).map(line => line.split('\t')).map(row => [row[1], row[5]]));
+for (const row of original.rows) assert.equal(row.code.toUpperCase(), publishedCodes.get(row.full),
+  `Rime 預設鍵表與推導器鍵表不一致：${row.full}`);
 
 // 使用獨立的簡化 Rime 規則解譯器逐條執行，防止大小寫中介結果被後續規則重寫。
 function compileAlgebra(algebra) {

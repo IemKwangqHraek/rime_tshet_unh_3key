@@ -12,11 +12,11 @@
 
 | 字 | 全拼 | 分段 | 三鍵 |
 | --- | --- | --- | --- |
-| 東 | `twung` | `t / wu / ng` | `TGD` |
-| 冬 | `towng` | `t / ow / ng` | `TWD` |
-| 豪 | `ghoaw` | `gh / oa / w` | `EBL` |
-| 生，平聲 | `sriaeng` | `s / riae / ng` | `SUD` |
-| 怎 | `tsvmq` | `ts / v / mq` | `FNV` |
+| 東 | `twung` | `t / wu / ng` | `FJL` |
+| 冬 | `towng` | `t / ow / ng` | `FQL` |
+| 豪 | `ghoaw` | `gh / oa / w` | `ALY` |
+| 生，平聲 | `sriaeng` | `s / riae / ng` | `LSL` |
+| 怎 | `tsvmq` | `ts / v / mq` | `REM` |
 
 ## 使用推導方案
 
@@ -44,11 +44,14 @@ npm run derive -- --position 端一冬平 生開三庚平
 - [Rime 使用與改鍵](docs/Rime使用與改鍵.md)：生成、安裝全拼／三拼方案，修改 JSON 鍵位配置及擴充詞典。
 - [全拼與三拼方案](docs/全拼與三拼方案.md)：完整聲韻規則、26 鍵表、例字及用法。
 - [設計取捨](docs/設計取捨.md)：輸入局部性、共鍵與解析要求。
+- [鍵位評價框架](docs/鍵位評價框架.md)：固定三段順序、不計記憶成本，以古今語料評估按鍵負擔與跨字連打。
+- [鍵位搜尋實現計劃](docs/鍵位搜尋實現計劃.md)：語料固定、等概率讀音統計、評分及候選搜尋的實作步驟。
+- [鍵位優化結果](docs/鍵位優化結果.md)：古今混合語料、二鍵／三鍵動作對照、最終選擇及重現方法。
 - [音系與豪韻](docs/音系與豪韻.md)：拼寫與擬音的區別、豪韻證據及反切核查。
 - [資料來源與重現](docs/資料來源與重現.md)：固定版本、下載地址、校驗值及可選反切分析。
 - [全拼與三鍵對照](data/positions.tsv)、[鍵表](data/keyboard.tsv)、[核對摘要](data/check.json)。
 
-`prengQvm.js` 是可單獨匯入的推導方案；`scripts/` 是本地查詢與驗證工具；`data/` 收錄本方案產生的結果及來源清單。上游原始碼、完整《廣韻》CSV、`node_modules` 和下載快取不隨庫提交。未採用的元音與順序解析實驗不列入發布內容。
+`prengQvm.js` 是可單獨匯入的推導方案；`scripts/` 是本地查詢、鍵位分析與驗證工具；`data/` 收錄本方案產生的碼表。外部語料、衍生頻率矩陣、上游原始碼、完整《廣韻》CSV、`node_modules` 和下載快取不隨庫提交；只保留固定來源連結、校驗值及可重現工具。
 
 ## Rime 輸入方案
 
@@ -58,4 +61,4 @@ npm run build:rime
 
 生成可安裝的全拼／三拼方案及共用字典至 `dist/rime/`。三拼按鍵由 [config/keyboards/default.json](config/keyboards/default.json) 配置；修改後再次生成即可，亦支援 `npm run build:rime -- --layout config/keyboards/my-layout.json --out dist/my-layout`。生成時檢查漏配、非法按鍵及完整三鍵碰撞，候選提供全拼提示。
 
-安裝及改鍵流程見 [Rime 使用與改鍵](docs/Rime使用與改鍵.md)。JSON 控制 Rime 鍵位；推導器內建試排及 `data/` 的基準鍵表維持獨立。
+安裝及改鍵流程見 [Rime 使用與改鍵](docs/Rime使用與改鍵.md)。預設 JSON、推導器與已提交碼表均使用「古今混合頻率優化 v1」；原始試排保存在 [baseline.json](config/keyboards/baseline.json) 供比較。

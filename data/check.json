@@ -1,7 +1,7 @@
 {
   "tshet_uinh": "0.15.4",
   "deriver_tools": "0.2.0",
-  "script_sha256": "3f28db216c9a4c6798bb2741141c86ce4bd4df7f8cd97b17ffef09787460ac49",
+  "script_sha256": "4bfc93c9402801950e4aee97992313ca10f0b56cbc7bd759c0c97939388e2a81",
   "original_positions": 3801,
   "current_positions": 3804,
   "current_only_positions": [
@@ -30,6 +30,6 @@
   ],
   "second_segments": 52,
   "reconstruction_exception": "端開四麻平：全拼 tiae；三段 t / va / ∅",
-  "layout_revision": "ia 從 A 移至 J，避免 biangq 與 braengq 同爲 BAF",
+  "layout_revision": "古今混合頻率優化 v1；固定既有共鍵組，重排物理鍵位",
   "fixed_spelling_checks": 22
 }

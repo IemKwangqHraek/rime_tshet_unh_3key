@@ -55,9 +55,9 @@ for (const p of positions.values()) {
   assert.equal(both(p), `${f}〔${c}〕`);
 }
 assert.equal(raw({}, null, '怎'), 'tsvmq');
-assert.equal(raw({ 輸出: '三拼' }, null, '怎'), 'FNV');
+assert.equal(raw({ 輸出: '三拼' }, null, '怎'), 'REM');
 assert.equal(raw({ 輸出: '三段' }, null, '怎'), 'ts / v / mq');
-record('補充：怎', 'tsvmq', 'FNV', ['ts', 'v', 'mq'], '本方案補充');
+record('補充：怎', 'tsvmq', 'REM', ['ts', 'v', 'mq'], '本方案補充');
 
 // 固定例字保護音系取捨；完整快照則保護全部既有拼式與鍵位。
 const fixtures = {
@@ -71,10 +71,10 @@ const fixtures = {
   云合三C廢上: 'uoiq',
 };
 for (const [d, f] of Object.entries(fixtures)) assert.equal(full(TshetUinh.音韻地位.from描述(d)), f, d);
-assert.equal(triple(TshetUinh.音韻地位.from描述('並三A陽上')), 'BJF');
-assert.equal(triple(TshetUinh.音韻地位.from描述('並二庚上')), 'BAF');
-assert.equal(fragmentKeys[1].get('ia'), 'J');
-assert.equal(fragmentKeys[1].get('rae'), 'A');
+assert.equal(triple(TshetUinh.音韻地位.from描述('並三A陽上')), 'YIG');
+assert.equal(triple(TshetUinh.音韻地位.from描述('並二庚上')), 'YGG');
+assert.equal(fragmentKeys[1].get('ia'), 'I');
+assert.equal(fragmentKeys[1].get('rae'), 'G');
 for (const char of ['打', '冷', '爹', '倄', '侑', '礥', '𠁫', '𩦠', '箉', '地']) {
   const entries = TshetUinh.資料.query字頭(char);
   assert.ok(entries.length);
@@ -104,7 +104,7 @@ const summary = {
   full_spelling_collisions: 0, three_key_collisions: 0,
   key_counts: [24, 23, 21], second_segments: fragmentKeys[1].size,
   reconstruction_exception: '端開四麻平：全拼 tiae；三段 t / va / ∅',
-  layout_revision: 'ia 從 A 移至 J，避免 biangq 與 braengq 同爲 BAF',
+  layout_revision: '古今混合頻率優化 v1；固定既有共鍵組，重排物理鍵位',
   fixed_spelling_checks: Object.keys(fixtures).length,
 };
 const generated = {

@@ -51,26 +51,25 @@ function 查韻表(表, 韻) {
 
 // 一個字面片段只有一個固定鍵位。大寫僅爲鍵名，不需按 Shift。
 const 第一鍵表 = {
-  p: 'P', ph: 'O', b: 'B', m: 'M', t: 'T', th: 'Y', d: 'D', n: 'N', l: 'L',
-  ts: 'F', tsh: 'R', dz: 'A', s: 'S', z: 'Z',
-  k: 'K', kh: 'I', g: 'G', ng: 'U', q: 'Q', h: 'H', x: 'H', gh: 'E',
-  '': 'W', hj: 'V', hy: 'V', ghj: 'C', ghy: 'C',
+  p: 'J', ph: 'N', b: 'Y', m: 'H', t: 'F', th: 'B', d: 'G', n: 'T', l: 'S',
+  ts: 'R', tsh: 'E', dz: 'V', s: 'L', z: 'X',
+  k: 'K', kh: 'W', g: 'O', ng: 'U', q: 'P', h: 'Q', x: 'Q', gh: 'A',
+  '': 'D', hj: 'I', hy: 'I', ghj: 'C', ghy: 'C',
 };
 const 第二鍵分配 = {
-  A: ['io', 'rae'], B: ['a', 'iv', 'oa'], C: ['ae', 'iu', 're'],
-  D: ['o', 'ryae'], E: ['e', 'ue'], F: ['ja', 'wa'], G: ['wu', 'yi'],
-  H: ['rva', 'rwae'], I: ['ji', 'vo', 'yo'], J: ['i', 'ia', 'va'], K: ['jv', 'uo'],
-  L: ['ju', 'u'], M: ['yae', 'ye'], N: ['jae', 'v'], O: ['iae', 'wo'],
-  P: ['ruo', 'rwe'], Q: ['rie', 'ua'], R: ['ro', 'rye', 've'],
-  S: ['ri', 'rv'], T: ['ru', 'ryi'], U: ['ie', 'je', 'riae'],
-  V: ['rvo', 'we'], W: ['jo', 'ow'],
+  A: ['jv', 'uo'], C: ['ruo', 'rwe'], D: ['o', 'ryae'], E: ['jae', 'v'],
+  F: ['ju', 'u'], G: ['io', 'rae'], H: ['iae', 'wo'], I: ['i', 'ia', 'va'],
+  J: ['wu', 'yi'], K: ['e', 'ue'], L: ['a', 'iv', 'oa'], M: ['yae', 'ye'],
+  N: ['ru', 'ryi'], O: ['ji', 'vo', 'yo'], P: ['ri', 'rv'], Q: ['jo', 'ow'],
+  R: ['ae', 'iu', 're'], S: ['ie', 'je', 'riae'], T: ['ro', 'rye', 've'],
+  U: ['ja', 'wa'], W: ['rvo', 'we'], X: ['rie', 'ua'], Y: ['rva', 'rwae'],
 };
 const 第二鍵表 = Object.fromEntries(Object.entries(第二鍵分配)
   .flatMap(([鍵, 片段們]) => 片段們.map(片段 => [片段, 鍵])));
 const 第三鍵表 = {
-  '': 'K', q: 'J', h: 'H', ng: 'D', ngq: 'F', ngh: 'G', k: 'S',
-  n: 'E', nq: 'R', nh: 'T', t: 'W', m: 'C', mq: 'V', mh: 'B', p: 'X',
-  i: 'I', iq: 'U', ih: 'Y', w: 'L', wq: 'M', wh: 'N',
+  '': 'K', q: 'J', h: 'I', ng: 'L', ngq: 'G', ngh: 'P', k: 'S',
+  n: 'D', nq: 'O', nh: 'C', t: 'E', m: 'Q', mq: 'M', mh: 'Z', p: 'U',
+  i: 'W', iq: 'F', ih: 'A', w: 'Y', wq: 'H', wh: 'N',
 };
 
 function 推導() {
