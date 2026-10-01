@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "QWERTY 標準指法探索模型 v1（非實測時間）",
+  "rows": ["qwertyuiop", "asdfghjkl", "zxcvbnm"],
+  "row_offsets": [0, 0.25, 0.75],
+  "fingers": [
+    [0, 1, 2, 3, 3, 4, 4, 5, 6, 7],
+    [0, 1, 2, 3, 3, 4, 4, 5, 6],
+    [0, 1, 2, 3, 3, 4, 4]
+  ],
+  "finger_names": ["左小", "左無名", "左中", "左食", "右食", "右中", "右無名", "右小"],
+  "home_keys": "asdfjkl;",
+  "finger_cost": [0.5, 0.25, 0.1, 0, 0, 0.1, 0.25, 0.5],
+  "row_cost": [0.35, 0, 0.55],
+  "reach_cost": 0.15,
+  "same_finger_different": 4,
+  "same_finger_distance": 0.8,
+  "repeat": 1.2,
+  "same_hand_row_distance": 0.2,
+  "load_targets": [0.09, 0.11, 0.14, 0.16, 0.16, 0.14, 0.11, 0.09],
+  "overload_weight": 20,
+  "notes": "B 用左食指。單鍵成本=行成本+指成本+離本指主鍵距離×reach_cost。同指異鍵成本含距離；同鍵重按另算。所有同手相鄰鍵另加行距成本。超出指負荷目標部分平方和×overload_weight。目標比例僅爲啓發式容量，非生理測量。無記憶成本、無交替手獎勵、無上屏及選字操作。"
+}

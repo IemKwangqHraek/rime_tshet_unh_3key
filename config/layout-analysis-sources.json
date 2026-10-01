@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "retrieved": "2026-09-28",
+  "sources": [
+    {
+      "id": "tang-0",
+      "repo": "chinese-poetry/chinese-poetry",
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "file": "全唐诗/poet.tang.0.json",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.0.json",
+      "sha256": "4f88f429938082523cdc72a1612bd7a7c3e3f7a33f8192c61ae51340efc3c92d",
+      "bytes": 408405
+    },
+    {
+      "id": "tang-1000",
+      "repo": "chinese-poetry/chinese-poetry",
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "file": "全唐诗/poet.tang.1000.json",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/%E5%85%A8%E5%94%90%E8%AF%97/poet.tang.1000.json",
+      "sha256": "6e703b8d8dcedbd6110f6d48d043665ca2131db2035a5bfcef5e59a19aeb6d75",
+      "bytes": 477519
+    },
+    {
+      "id": "poetry-license",
+      "repo": "chinese-poetry/chinese-poetry",
+      "commit": "b8594f81a89752241442f2ce267d6f66f96704ee",
+      "file": "LICENSE",
+      "url": "https://raw.githubusercontent.com/chinese-poetry/chinese-poetry/b8594f81a89752241442f2ce267d6f66f96704ee/LICENSE",
+      "sha256": "c195319aeaa3ffcbe16aa5d26eec19eae5a42f84337dd2b3dc3c9d5ccbbd6507",
+      "bytes": 1076
+    },
+    {
+      "id": "gsd-train",
+      "repo": "UniversalDependencies/UD_Chinese-GSD",
+      "commit": "22f73e87f7ddc530bb131a6b7587971a03e1a712",
+      "file": "zh_gsd-ud-train.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-GSD/22f73e87f7ddc530bb131a6b7587971a03e1a712/zh_gsd-ud-train.conllu",
+      "sha256": "de36e605a4786edb00097165cfc0ee425ab668a2dfc1da7ce4652ba4d2585b1e",
+      "bytes": 9318330
+    },
+    {
+      "id": "gsd-dev",
+      "repo": "UniversalDependencies/UD_Chinese-GSD",
+      "commit": "22f73e87f7ddc530bb131a6b7587971a03e1a712",
+      "file": "zh_gsd-ud-dev.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-GSD/22f73e87f7ddc530bb131a6b7587971a03e1a712/zh_gsd-ud-dev.conllu",
+      "sha256": "09374c8361400861a536ae94a1d7710e1cdd72285c32b9764d94d2d956b4ae02",
+      "bytes": 1195021
+    },
+    {
+      "id": "gsd-test",
+      "repo": "UniversalDependencies/UD_Chinese-GSD",
+      "commit": "22f73e87f7ddc530bb131a6b7587971a03e1a712",
+      "file": "zh_gsd-ud-test.conllu",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-GSD/22f73e87f7ddc530bb131a6b7587971a03e1a712/zh_gsd-ud-test.conllu",
+      "sha256": "ff01a3d01d62b623756396085e78bdaeefb7c2b7935a890dde5b18e92712d54f",
+      "bytes": 1136344
+    },
+    {
+      "id": "gsd-license",
+      "repo": "UniversalDependencies/UD_Chinese-GSD",
+      "commit": "22f73e87f7ddc530bb131a6b7587971a03e1a712",
+      "file": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/UniversalDependencies/UD_Chinese-GSD/22f73e87f7ddc530bb131a6b7587971a03e1a712/LICENSE.txt",
+      "sha256": "899b1804a12ebc090b96339614eede1b64b686721b650a71430b55b5235f7f79",
+      "bytes": 202
+    }
+  ],
+  "corpora": {
+    "classical": {
+      "name": "唐詩前兩個 1000 首檔案",
+      "source_ids": [
+        "tang-0",
+        "tang-1000"
+      ],
+      "license": "Repository MIT; ancient texts public domain",
+      "extraction": "Each poem paragraphs joined with newline; author/title excluded. No script conversion. Exact duplicate poems removed. SHA-256 of text mod 10: 0 test, 1 dev, otherwise train.",
+      "scope": "Early ordered subset of Tang collection, not representative of all classical genres."
+    },
+    "modern": {
+      "name": "UD Chinese GSD 繁體 wiki 文本",
+      "source_ids": [
+        "gsd-train",
+        "gsd-dev",
+        "gsd-test"
+      ],
+      "license": "CC BY-SA 4.0 for treebank annotations; repository notes underlying content ownership is separate. Raw files are cached, not redistributed.",
+      "extraction": "Only # text = lines; each sentence is a separate document. Original train/dev/test split. Exact duplicates retained only once, priority test > dev > train.",
+      "scope": "Wiki genre; not balanced modern Chinese or conversational text."
+    }
+  },
+  "boundaries": "All non-Unified_Ideograph code points and characters absent from reading table break adjacency; no conversion, whitespace removal, or stitching across documents.",
+  "reading_policy": "Uniform over distinct scheme full spellings per character; independent at each occurrence."
+}

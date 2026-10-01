@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "name": "三鍵動作附加成本 v1（未經實打校準）",
+  "weight": 1,
+  "redirect": 0.8,
+  "skip_same_finger": 0.8,
+  "skip_distance": 0.3,
+  "notes": "附加於既有單鍵／二鍵模型。redirect：三鍵同手、相鄰兩次均換指，按手指序號先增後減或先減後增。skip_same_finger：中間鍵用另一隻手，第一與第三鍵同指異鍵，附加成本=skip_same_finger+skip_distance×首末鍵距離。兩者互斥，不另重罰已有二鍵同指項。內滾、外滾、三次同指只報比例，不給獎懲。權重 0 關閉附加項；0.5／1／2 僅爲敏感度假設，不是經驗係數。"
+}
