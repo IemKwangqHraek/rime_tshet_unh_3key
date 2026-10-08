@@ -449,7 +449,7 @@
 初開三臻上	tshrinq	tsh	ri	nq	EPO	當前內建
 初開三臻入	tshrit	tsh	ri	t	EPE	當前內建
 初開三臻去	tshrinh	tsh	ri	nh	EPC	當前內建
-初開三蒸入	tshrvk	tsh	rv	k	EPS	當前內建
+初開三蒸入	tshrik	tsh	ri	k	EPS	當前內建
 初開三陽上	tshrvangq	tsh	rva	ngq	EYG	當前內建
 初開三陽去	tshrvangh	tsh	rva	ngh	EYP	當前內建
 初開三陽平	tshrvang	tsh	rva	ng	EYL	當前內建
@@ -788,8 +788,8 @@
 崇開三臻上	dzrinq	dz	ri	nq	VPO	當前內建
 崇開三臻入	dzrit	dz	ri	t	VPE	當前內建
 崇開三臻平	dzrin	dz	ri	n	VPD	當前內建
-崇開三蒸入	dzrvk	dz	rv	k	VPS	當前內建
-崇開三蒸平	dzrvng	dz	rv	ng	VPL	當前內建
+崇開三蒸入	dzrik	dz	ri	k	VPS	當前內建
+崇開三蒸平	dzring	dz	ri	ng	VPL	當前內建
 崇開三陽去	dzrvangh	dz	rva	ngh	VYP	當前內建
 崇開三陽平	dzrvang	dz	rva	ng	VYL	當前內建
 崇開三魚上	dzrvoq	dz	rvo	q	VWJ	當前內建
@@ -2721,9 +2721,9 @@
 生開三脂平	sri	s	ri	i	LPW	當前內建
 生開三臻入	srit	s	ri	t	LPE	當前內建
 生開三臻平	srin	s	ri	n	LPD	當前內建
-生開三蒸上	srvngq	s	rv	ngq	LPG	當前內建
-生開三蒸入	srvk	s	rv	k	LPS	當前內建
-生開三蒸平	srvng	s	rv	ng	LPL	當前內建
+生開三蒸上	sringq	s	ri	ngq	LPG	當前內建
+生開三蒸入	srik	s	ri	k	LPS	當前內建
+生開三蒸平	sring	s	ri	ng	LPL	當前內建
 生開三陽上	srvangq	s	rva	ngq	LYG	當前內建
 生開三陽平	srvang	s	rva	ng	LYL	當前內建
 生開三魚上	srvoq	s	rvo	q	LWJ	當前內建
@@ -3424,7 +3424,7 @@
 莊開三臻上	tsrinq	ts	ri	nq	RPO	當前內建
 莊開三臻入	tsrit	ts	ri	t	RPE	當前內建
 莊開三臻平	tsrin	ts	ri	n	RPD	當前內建
-莊開三蒸入	tsrvk	ts	rv	k	RPS	當前內建
+莊開三蒸入	tsrik	ts	ri	k	RPS	當前內建
 莊開三陽入	tsrvak	ts	rva	k	RYS	當前內建
 莊開三陽去	tsrvangh	ts	rva	ngh	RYP	當前內建
 莊開三陽平	tsrvang	ts	rva	ng	RYL	當前內建

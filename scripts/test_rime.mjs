@@ -36,6 +36,9 @@ for (const row of original.rows) {
 }
 assert.match(original.files['preng.dict.yaml'], /\n爹\ttiae\t100\n/);
 assert.match(original.files['preng.dict.yaml'], /\n怎\ttsvmq\t100\n/);
+assert.match(original.files['preng.dict.yaml'], /\n色\tsrik\t100\n/);
+assert.match(original.files['preng.dict.yaml'], /\n測\ttshrik\t100\n/);
+assert.match(original.files['preng.dict.yaml'], /\n陟\ttrvk\t100\n/);
 assert.match(original.files['preng.dict.yaml'], /\n中古漢語\ttrung koq hanh ngvoq\t100\n/);
 
 // 對所有按鍵作置換仍無碰撞；字典、全拼 schema 必須完全不受鍵位影響。

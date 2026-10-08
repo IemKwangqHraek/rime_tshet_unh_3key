@@ -2,7 +2,7 @@
 
 基於 [IemKwangqHraek/prengQvm](https://github.com/IemKwangqHraek/prengQvm)，保留原拼音的大部分拼式，以固定三鍵輸入一個帶聲調的中古漢語音節。全拼僅用小寫拉丁字母，三拼按鍵不需要 Shift。
 
-本版採用東一、侯 `wu`（尤仍爲 `u`）、豪 `oaw`、蒸 C 韻核 `v`；保留 `a/ae`、冬韻 `ow`、顯式等類標記，取消莊組庚三歸二等。特殊字與全部聲韻規則見[完整說明](docs/全拼與三拼方案.md)。
+本版採用東一、侯 `wu`（尤仍爲 `u`）、豪 `oaw`、蒸 C 韻核 `v`；莊組蒸用 B 拼式 `i`，知組蒸仍用 `v`。保留 `a/ae`、冬韻 `ow`、顯式等類標記，取消莊組庚三歸二等。特殊字與全部聲韻規則見[完整說明](docs/全拼與三拼方案.md)。
 
 | 第一鍵 | 第二鍵 | 第三鍵 |
 | --- | --- | --- |
@@ -16,6 +16,8 @@
 | 冬 | `towng` | `t / ow / ng` | `FQL` |
 | 豪 | `ghoaw` | `gh / oa / w` | `ALY` |
 | 生，平聲 | `sriaeng` | `s / riae / ng` | `LSL` |
+| 色 | `srik` | `s / ri / k` | `LPS` |
+| 陟 | `trvk` | `t / rv / k` | `FPS` |
 | 怎 | `tsvmq` | `ts / v / mq` | `REM` |
 
 ## 使用推導方案

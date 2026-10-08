@@ -64,6 +64,9 @@ const fixtures = {
   端一冬平: 'towng', 端開一登平: 'tong', 端一東平: 'twung',
   見開一豪平: 'koaw', 端一侯平: 'twu', 生開三庚平: 'sriaeng',
   章開三蒸平: 'tjvng', 幫三B蒸平: 'pring', 見開三B侵平: 'kvm',
+  生開三蒸平: 'sring', 生開三蒸上: 'sringq', 崇開三蒸平: 'dzring',
+  莊開三蒸入: 'tsrik', 初開三蒸入: 'tshrik', 崇開三蒸入: 'dzrik',
+  生開三蒸入: 'srik', 知開三蒸入: 'trvk', 澄開三蒸入: 'drvk',
   莊開三侵平: 'tsrim', 見開三B支平: 'kve', 知開三支平: 'trie',
   曉合三A支平: 'xye', 定開二佳上: 'greq', 端開二庚上: 'taengq',
   來開二庚上: 'laengq', 定開四脂去: 'dih', 端開四麻平: 'tiae',
@@ -73,6 +76,8 @@ const fixtures = {
 for (const [d, f] of Object.entries(fixtures)) assert.equal(full(TshetUinh.音韻地位.from描述(d)), f, d);
 assert.equal(triple(TshetUinh.音韻地位.from描述('並三A陽上')), 'YIG');
 assert.equal(triple(TshetUinh.音韻地位.from描述('並二庚上')), 'YGG');
+assert.equal(triple(TshetUinh.音韻地位.from描述('生開三蒸入')), 'LPS');
+assert.equal(triple(TshetUinh.音韻地位.from描述('知開三蒸入')), 'FPS');
 assert.equal(fragmentKeys[1].get('ia'), 'I');
 assert.equal(fragmentKeys[1].get('rae'), 'G');
 for (const char of ['打', '冷', '爹', '倄', '侑', '礥', '𠁫', '𩦠', '箉', '地']) {
